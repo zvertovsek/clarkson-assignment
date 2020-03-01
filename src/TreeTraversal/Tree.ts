@@ -37,7 +37,7 @@ class Tree <ICollection> {
         }
     }
 
-    public static addNode(parent_id: string, node: IModel, index: number) {
+    public static addNode(parent_id: string, node: IModel, index: number = 0) {
         const flattenCollection: IModel[] = Tree.flatten();
         const children: IModel[] = flattenCollection.filter((node: IModel) => node.parent_id === parent_id);
         children.sort((a, b) => a.order - b.order).splice(index, 0, { ...node, parent_id });
