@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 interface IProps {
     content: string;
@@ -20,7 +20,7 @@ const TagComponent: React.FC<IProps> = (props) => {
         "data-testid": "tag" 
     };
     
-    useEffect(() => {
+    React.useEffect(() => {
         let prefix: string = "";
         let message: string = props.content;
 
@@ -35,10 +35,7 @@ const TagComponent: React.FC<IProps> = (props) => {
             className: (prefix !== "") ? prefix: undefined,
             content: message
         });
-
-        
     }, []);
-
     
     if (typeof state.className !== 'undefined') {
         tagAttrs.className = state.className;

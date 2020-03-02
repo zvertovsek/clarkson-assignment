@@ -2,15 +2,7 @@ import React from 'react';
 import Form from './Form';
 import Results from './Results';
 import { callApi } from './Api';
-
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-    position: relative;
-    display: block;
-    margin: 50px auto;
-    width: 600px;
-`;
+import { Wrapper } from '../Elements';
 
 const Component: React.FC = () => {
     const [ dates, setdates ] = React.useState({});

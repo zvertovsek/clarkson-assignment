@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Tag from './Component';
 
+import Tag from './Component';
 
 describe("DOM Styling tests", () => {
     test("with SYS prefix", () => {
@@ -23,4 +23,5 @@ describe("DOM Styling tests", () => {
         const el = getByTestId("tag");
         expect(el).toHaveTextContent("Message without any prefix");
     });
-});  
+});
+  

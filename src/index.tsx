@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-//import App from './App';
-
-import RangeInputComponent from  './RangeInput/Component';
-
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<RangeInputComponent />, document.getElementById('root'));
+import { BrowserRouter } from 'react-router-dom';
+import { Navigation, Router } from './Utilities';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+import './index.css';
+
+ReactDOM.render(
+    <BrowserRouter>
+        <Navigation />
+        <Router />
+    </BrowserRouter>, 
+    document.getElementById('root')
+);
+
 serviceWorker.unregister();

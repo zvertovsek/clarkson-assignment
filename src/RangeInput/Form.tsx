@@ -1,4 +1,5 @@
 import React from 'react';
+import { Form } from '../Elements';
 
 interface IFormProps {
     onFormSubmit: (value: string) => void;
@@ -18,11 +19,11 @@ const FormComponent: React.FC<IFormProps> = (props) => {
     }
 
     return (
-        <form onSubmit={handleFormSubmit}>
+        <Form onSubmit={handleFormSubmit}>
             <label>Date Range: </label>
             <input type="text" value={inputValue} onChange={handleChange} />
             <button type="submit">Submit</button>
-        </form>
+        </Form>
     );
 };
 

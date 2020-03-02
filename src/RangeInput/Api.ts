@@ -27,8 +27,7 @@ function parseRangeDates(str: string) {
     } 
 
     const end = new Date(strEnd);
-    const start = new Date(startArr.join(" "));
-    
+    const start = new Date(startArr.join(" "));   
     
     return [ start, end ];    
 }
@@ -47,7 +46,7 @@ function processAndTranslate(str: string) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(response);
-        }, 500);
+        }, 250);
     });
 } 
 

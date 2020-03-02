@@ -10,7 +10,6 @@ interface IDisplayProps {
 }
 
 const DisplayComponent: React.FC<IDisplayProps> = (props) => {
-    
     return (
         <div>
             <p><strong>Start Date:</strong> {props.dates.startDate}</p>
